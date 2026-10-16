@@ -1,0 +1,258 @@
+/* Biblioteca de cores do CredMais */
+:root {
+    --azul-principal: #1A67F5;
+    --azul-escuro: #123574;
+    --azul-claro: #D1E3FF;
+    --verde: #42BF7A;
+    --vermelho: #FF4D4D;
+    --branco: #FFFFFF;
+    --fundo: #F3F6FA;
+    --cinza-texto: #7186AA;
+}
+
+/* Configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fundo da página e fonte */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--fundo);
+    color: #000000;
+}
+
+/* Cabeçalho com a logo e o menu */
+header {
+    min-height: 88px;
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3%;
+    border-bottom: 3px solid #DCE1E8;
+}
+
+/* Área da logo */
+.area-logo img {
+    width: 175px;
+    height: auto;
+}
+
+/* Menu de navegação */
+.menu {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Itens do menu */
+.item-menu {
+    color: var(--azul-escuro);
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 20px;
+    padding: 10px 0;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+/* Página atual do menu */
+.pagina-atual {
+    border-bottom: 3px solid var(--azul-principal);
+}
+
+/* Conteúdo principal */
+main {
+    padding: 45px 6%;
+}
+
+/* Área do título e do botão */
+.cabecalho-taxas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 56px;
+}
+
+/* Título com o ícone */
+.titulo-pagina {
+    display: flex;
+    align-items: center;
+}
+/* Imagem do ícone */
+.icone-taxas img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+/* Título principal */
+.texto-titulo h1 {
+    color: var(--azul-escuro);
+    font-size: 23px;
+    margin-bottom: 3px;
+}
+
+/* Descrição do título */
+.texto-titulo p {
+    color: var(--cinza-texto);
+    font-size: 14px;
+}
+
+/* Botão de cadastrar */
+.botao-cadastrar {
+    background-color: var(--azul-principal);
+    color: var(--branco);
+    border: none;
+    border-radius: 9px;
+    padding: 17px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Título da lista */
+.lista-taxas h2 {
+    color: var(--azul-escuro);
+    font-size: 23px;
+    margin: 0 0 18px 6px;
+}
+
+/* Cabeçalho da tabela */
+.linha-titulo {
+    display: flex;
+    align-items: center;
+    background-color: var(--azul-claro);
+    border-radius: 14px 14px 0 0;
+    min-height: 64px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Espaçamento das colunas do cabeçalho */
+.linha-titulo div {
+    width: 28%;
+    text-align: center;
+}
+
+/* Coluna das ações */
+.linha-titulo div:last-child {
+    width: 44%;
+}
+
+/* Linhas com as taxas */
+.linha-taxa {
+    display: flex;
+    align-items: center;
+    min-height: 68px;
+    background-color: var(--branco);
+    border-bottom: 1px solid var(--azul-claro);
+}
+
+/* Colunas com os valores */
+.linha-taxa > div {
+    width: 28%;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Área dos botões */
+.linha-taxa .botoes-acoes {
+    width: 44%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Botão editar */
+.botao-editar {
+    width: 88px;
+    padding: 5px;
+    color: var(--azul-principal);
+    background-color: var(--azul-claro);
+    border: 1px solid var(--azul-principal);
+    border-radius: 9px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Botão excluir */
+.botao-excluir {
+    width: 88px;
+    padding: 6px;
+    color: var(--branco);
+    background-color: var(--azul-principal);
+    border: none;
+    border-radius: 9px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 800px) {
+
+    /* Cabeçalho em telas menores */
+    header {
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    /* Menu em várias linhas */
+    .menu {
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    /* Menor distância entre os itens */
+    .item-menu {
+        margin: 8px 10px;
+    }
+
+    /* Conteúdo da página */
+    main {
+        padding: 30px 4%;
+    }
+
+    /* Título e botão ficam um abaixo do outro */
+    .cabecalho-taxas {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 40px;
+    }
+
+    /* Botão de cadastro */
+    .botao-cadastrar {
+        margin-top: 20px;
+    }
+
+    /* Tamanho dos títulos */
+    .texto-titulo h1 {
+        font-size: 19px;
+    }
+
+    .lista-taxas h2 {
+        font-size: 20px;
+    }
+
+    /* Ajuste das colunas */
+    .linha-titulo div,
+    .linha-taxa > div {
+        width: 25%;
+        font-size: 13px;
+    }
+
+    .linha-titulo div:last-child,
+    .linha-taxa .botoes-acoes {
+        width: 50%;
+    }
+
+    /* Botões menores */
+    .botao-editar,
+    .botao-excluir {
+        width: 65px;
+        font-size: 12px;
+    }
+}
